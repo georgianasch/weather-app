@@ -1,0 +1,18 @@
+:host {
+  width: fit-content;
+}
+
+.weather-container {
+  margin: var(--margin-regular);
+  height: fit-content;
+  .mat-card-header {
+    display: flex;
+    justify-content: space-between;
+  }
+  .weather-container-content {
+    display: flex;
+    gap: var(--margin-regular);
+    flex-direction: column !important;
+    justify-content: space-between;
+  }
+}

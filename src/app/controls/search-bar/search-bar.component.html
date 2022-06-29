@@ -1,0 +1,9 @@
+<mat-form-field class="search-form-field" appearance="fill">
+  <mat-label>Search location</mat-label>
+  <input
+    matInput
+    type="text"
+    [(ngModel)]="value"
+    (change)="search.emit($any($event.target).value)"
+  />
+</mat-form-field>

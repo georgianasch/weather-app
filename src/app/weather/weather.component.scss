@@ -1,0 +1,34 @@
+:host {
+  width: 100%;
+}
+
+.weather-details-card {
+  display: flex;
+  flex-direction: column;
+  background-color: var(--background-color-grey-dark);
+
+  .weather-details-card__location {
+    font-size: var(--font-big);
+  }
+
+  .weather-details-card__summary {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .weather-details-card__temperature {
+    font-size: var(--font-x-big);
+    line-height: calc(var(--font-x-big) * 2);
+  }
+
+  .weather-details-card__details {
+    flex-direction: row;
+    font-size: var(--font-x-small);
+    justify-content: space-between;
+    margin: var(--margin-regular);
+  }
+
+  .error {
+    width: 100%;
+  }
+}

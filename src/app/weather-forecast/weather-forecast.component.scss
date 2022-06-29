@@ -1,0 +1,23 @@
+:host {
+  width: 100%;
+}
+
+.mat-icon {
+  margin-right: var(--margin-regular);
+  margin-top: var(--margin-regular);
+}
+
+.weather-forecast {
+  background-color: var(--background-color-grey-dark);
+}
+
+.mat-card-header {
+  font-size: var(--font-big) !important;
+  justify-content: center;
+  margin-bottom: var(--margin-regular);
+}
+
+.mat-card-content {
+  display: flex;
+  flex-direction: row;
+}

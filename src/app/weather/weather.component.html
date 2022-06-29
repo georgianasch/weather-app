@@ -1,0 +1,66 @@
+<mat-card class="weather-details-card">
+  <mat-card-content>
+    <app-error
+      *ngIf="error"
+      class="weather-details-card__errors"
+      [error]="error"
+    ></app-error>
+    <div *ngIf="!error" class="weather-details-card__summary">
+      <div class="weather-details-card__temperature">
+        <img [src]="weatherData?.iconUrl" alt="" />
+        {{ weatherData?.temperature | number: "1.0-0" }}
+        {{ MeasurementUnits[measurementUnit || defaultUnit]?.temperature }}
+      </div>
+      <div class="weather-details-card__feels-like-temperature">
+        Feels like
+        {{ weatherData?.feelsLike | number: "1.0-0" }}
+        {{ MeasurementUnits[measurementUnit || defaultUnit]?.temperature }}
+      </div>
+
+      <div class="weather-details-card__location">
+        <strong>{{ weatherData?.name }}, {{ weatherData?.countryCode }}</strong>
+      </div>
+
+      <div class="weather-details-card__lastUpdated">
+        <strong>Last updated at:</strong>
+        {{ weatherData?.lastUpdatedAt | date: "medium" }}
+      </div>
+
+      <div class="weather-details-card__description">
+        <strong>{{ weatherData?.description | titlecase }}</strong>
+      </div>
+
+      <div class="weather-details-card__temperatures">
+        <strong
+          >{{ weatherData?.minTemperature | number: "1.0-0" }}
+          {{ MeasurementUnits[measurementUnit || defaultUnit]?.temperature }} /
+          {{ weatherData?.maxTemperature | number: "1.0-0" }}
+          {{ MeasurementUnits[measurementUnit || defaultUnit]?.temperature }}
+        </strong>
+      </div>
+    </div>
+
+    <div *ngIf="!error" class="weather-details-card__details">
+      <div class="weather-details-card__wind-speed">
+        <strong>Wind speed: </strong>{{ weatherData?.windSpeed }}
+        {{ MeasurementUnits[measurementUnit || defaultUnit]?.windSpeed }}
+      </div>
+
+      <div class="weather-details-card__humidity">
+        <strong>Humidity: </strong>{{ weatherData?.humidity }} %
+      </div>
+
+      <div class="weather-details-card__pressure">
+        <strong>Pressure: </strong>{{ weatherData?.pressure }}
+        {{ MeasurementUnits[measurementUnit || defaultUnit]?.pressure }}
+      </div>
+      <div class="weather-details-card__sunrise">
+        <strong>Sunrise: </strong>{{ weatherData?.sunrise }}
+      </div>
+
+      <div class="weather-details-card__sunset">
+        <strong>Sunset: </strong>{{ weatherData?.sunset }}
+      </div>
+    </div>
+  </mat-card-content>
+</mat-card>

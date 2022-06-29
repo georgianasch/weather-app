@@ -1,1 +1,37 @@
 /* You can add global styles to this file, and also import other style files */
+
+html,
+body {
+  height: 100%;
+}
+body {
+  margin: 0;
+  font-family: Roboto, "Helvetica Neue", sans-serif;
+  background: var(--background-color-grey-dark);
+  color: var(--color-light);
+}
+div {
+  display: flex;
+  gap: var(--margin-small);
+}
+.error {
+  font-size: var(--font-big);
+  color: var(--color-error) !important;
+}
+:root {
+  --margin-small: 10px;
+  --margin-regular: 20px;
+  --margin-big: 0px;
+
+  --font-x-small: 12px;
+  --font-small: 14px;
+  --font-regular: 16px;
+  --font-big: 20px;
+  --font-x-big: 30px;
+
+  --background-color-grey-light: #424242;
+  --background-color-grey-dark: #303030;
+
+  --color-light: #fff;
+  --color-error: red;
+}

@@ -25,3 +25,49 @@ Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To u
 ## Further help
 
 To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
+
+## Example of response from the weather data API:
+
+{
+"coord": {
+"lon": 26.1063,
+"lat": 44.4323
+},
+"weather": [
+{
+"id": 800,
+"main": "Clear",
+"description": "clear sky",
+"icon": "01d"
+}
+],
+"base": "stations",
+"main": {
+"temp": 29.43,
+"feels_like": 28.96,
+"temp_min": 27.79,
+"temp_max": 31.1,
+"pressure": 1009,
+"humidity": 39
+},
+"visibility": 10000,
+"wind": {
+"speed": 4.12,
+"deg": 60
+},
+"clouds": {
+"all": 0
+},
+"dt": 1656149961,
+"sys": {
+"type": 2,
+"id": 2032494,
+"country": "RO",
+"sunrise": 1656124325,
+"sunset": 1656180245
+},
+"timezone": 10800,
+"id": 683506,
+"name": "Bucharest",
+"cod": 200
+}

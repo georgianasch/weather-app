@@ -1,0 +1,12 @@
+<mat-button-toggle-group
+  [multiple]="multiple"
+  [(value)]="selectedValue"
+  (change)="toggle.emit($event.value)"
+>
+  <mat-button-toggle
+    *ngFor="let option of options"
+    [value]="option.value"
+    [id]="option.value"
+    >{{ option.label }}</mat-button-toggle
+  >
+</mat-button-toggle-group>

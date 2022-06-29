@@ -1,0 +1,38 @@
+<mat-card class="weather-forecast">
+  <mat-card-header>
+    <div class="weather-forecast-title">Weather Forecast</div>
+  </mat-card-header>
+
+  <mat-card-content>
+    <app-error
+      *ngIf="error"
+      class="weather-forecast-error"
+      [error]="error"
+    ></app-error>
+    <div *ngIf="!error" class="weather-forecast-cards">
+      <mat-icon
+        *ngIf="currentSorting === SortType.Ascending"
+        class="weather-forecast-sort-desc"
+        title="toggle sorting"
+        (click)="toggleSorting()"
+        >arrow_circle_left</mat-icon
+      >
+      <mat-icon
+        *ngIf="currentSorting === SortType.Descending"
+        class="weather-forecast-sort-asc"
+        title="toggle sorting"
+        (click)="toggleSorting()"
+        >arrow_circle_right</mat-icon
+      >
+      <app-weather-forecast-card
+        *ngFor="
+          let weatherForecast of weatherForecast$
+            | async
+            | sort: 'date':currentSorting
+        "
+        [weatherForecast]="weatherForecast"
+        [measurementUnit]="measurementUnit"
+      ></app-weather-forecast-card>
+    </div>
+  </mat-card-content>
+</mat-card>

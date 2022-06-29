@@ -1,0 +1,21 @@
+<mat-card class="weather-forecast-card">
+  <div class="weather-forecast-details">
+    <div class="weather-forecast-details__day">
+      {{ weatherForecast?.date | today }}
+    </div>
+    <div class="weather-forecast-details__icon">
+      <img [src]="weatherForecast?.iconUrl" />
+    </div>
+    <div class="weather-forecast-details__maxTemp">
+      {{ weatherForecast?.maxTemperature | number: "1.0-0" }}
+      {{ MeasurementUnits[measurementUnit || defaultUnit]?.temperature }}
+    </div>
+    <div class="weather-forecast-details__minTemp">
+      {{ weatherForecast?.minTemperature | number: "1.0-0" }}
+      {{ MeasurementUnits[measurementUnit || defaultUnit]?.temperature }}
+    </div>
+    <div class="weather-forecast-details__description">
+      {{ weatherForecast?.description }}
+    </div>
+  </div>
+</mat-card>

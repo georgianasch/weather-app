@@ -1,0 +1,9 @@
+.weather-forecast-card {
+  background-color: var(--background-color-grey-dark);
+}
+.weather-forecast-details {
+  flex-direction: column;
+}
+.weather-forecast-details__day {
+  font-size: var(--font-big);
+}
